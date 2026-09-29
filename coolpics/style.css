@@ -1,0 +1,21 @@
+div {
+  object-fit: cover;
+  text-align: center;
+}
+img{
+    margin: 2em;
+}
+ul{
+    display: none;
+    list-style: none;
+}
+
+/* Tablets and up (768px or wider) */
+@media screen and (min-width: 768px) {
+  ul{
+    display: block;
+  }
+  #menu-button {
+    display: none;
+  }
+}

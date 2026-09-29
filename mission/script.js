@@ -15,5 +15,4 @@ function changeTheme() {
         body.style.color = "black";
         logo.src = "byui-logo-blue.webp";
     }
-}           
-                    
+}
