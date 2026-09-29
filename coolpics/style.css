@@ -5,7 +5,7 @@ div {
 img{
     margin: 2em;
 }
-ul{
+#menu{
     display: none;
     list-style: none;
 }
