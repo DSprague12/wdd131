@@ -1,10 +1,12 @@
-const menu = document.querySelector('#menu');
-const menuButton = document.querySelector('#menu-button');
+const menuButton = document.querySelector(".menu-btn");
+const navigation = document.querySelector(".primary-nav");
 
-menuButton.addEventListener('click', () => {
-    if (menu.style.display === 'block') {
-        menu.style.display = 'none';
-    } else {
-        menu.style.display = 'block';
-    }
+menuButton.addEventListener("click", () => {
+  navigation.classList.toggle("is-open");
+});
+
+navigation.addEventListener("click", (event) => {
+  if (event.target.closest("a")) {
+    navigation.classList.remove("is-open");
+  }
 });
