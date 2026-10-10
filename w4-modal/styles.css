@@ -1,0 +1,86 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin: 35px 0;
+}
+.gallery {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.gallery figure {
+    margin: 0 0 24px;
+}
+
+figure img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 5px 5px 15px black;
+    display: block;
+    margin: 0 auto;
+}
+/* modal */
+
+dialog img {
+    display: block;
+    max-width: min(90vw, 800px);
+    max-height: 80vh;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+dialog {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 8vh 5vw;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.close-viewer {
+    position: absolute;
+    top: 2vh;
+    right: 2vw;
+    padding: 3px 8px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 700px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .gallery figure {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

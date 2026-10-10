@@ -54,10 +54,45 @@ h2{
   object-fit: cover;
   border: 4px solid white;
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
-
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3.5rem 1rem 1rem;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 20;
+}
+.overlay[hidden] {
+  display: none;
+}
+.modal-image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(100%, 1100px);
+  max-height: 85vh;
+  object-fit: contain;
+  border: 4px solid white;
+}
+#close-overlay-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 21;
+}
 @media screen and (min-width: 768px) {
-  .primary-nav {
+  .primary-nav,
+  .primary-nav.is-open {
     display: flex;
     justify-content: center;
     gap: 1rem;
