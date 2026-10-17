@@ -1,0 +1,211 @@
+:root {
+    color-scheme: light;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #242124;
+    background: #f5f3f1;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 1.25rem;
+}
+
+.site-card {
+    width: min(100%, 70rem);
+    margin: 0 auto;
+    background: #fff;
+    border: 2px solid #282528;
+    box-shadow: 0.3rem 0.3rem 0 #d6d0cc;
+}
+
+.site-header {
+    display: grid;
+    gap: 0;
+}
+
+.site-header h1 {
+    margin: 0;
+    padding: 1.1rem 1rem;
+    color: #3c2b3a;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    text-align: center;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: clamp(1rem, 5vw, 2.5rem);
+    margin: 0;
+    padding: 0.8rem 1.25rem;
+    border-top: 1px solid #e8a96d;
+    border-bottom: 1px solid #e8a96d;
+    list-style: none;
+}
+
+.main-nav a {
+    color: #a20b2d;
+    font-weight: 700;
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.2em;
+}
+
+.main-nav a:hover {
+    text-decoration-thickness: 0.15em;
+}
+
+.main-nav a:focus-visible {
+    outline: 3px solid #2f5d50;
+    outline-offset: 4px;
+}
+
+.book-post {
+    display: grid;
+    grid-template-areas:
+        "meta"
+        "content";
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.book-meta {
+    grid-area: meta;
+    border-bottom: 1px solid #e8a96d;
+    text-align: right;
+}
+
+.book-meta dl {
+    display: grid;
+    justify-content: stretch;
+    gap: 0.5rem;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+.book-meta dl div {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.book-meta dt {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+
+.book-meta dd {
+    margin: 0;
+}
+
+.book-meta dl div:first-child dd {
+    font-style: italic;
+}
+
+.rating {
+    color: #8a4b00;
+    font-size: 1.2rem;
+    letter-spacing: 0.08em;
+}
+
+.book-content {
+    grid-area: content;
+    display: grid;
+    justify-items: center;
+    align-content: start;
+}
+
+.book-content h2 {
+    margin: 0 0 1rem;
+    color: #a20b2d;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.25rem, 3vw, 1.65rem);
+    text-align: center;
+}
+
+.book-content figure {
+    margin: 0;
+    text-align: center;
+}
+
+.cover {
+    display: block;
+    width: min(100%, 9rem);
+    height: auto;
+    margin: 0 auto;
+}
+
+.book-content figcaption {
+    margin-top: 0.5rem;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.description {
+    max-width: 38rem;
+    margin: 1rem 0 0;
+    line-height: 1.6;
+}
+
+footer {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #e8a96d;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (min-width: 40rem) {
+    body {
+        padding: 2rem;
+    }
+
+    .book-post {
+        grid-template-areas: "meta content";
+        grid-template-columns: minmax(9rem, 0.7fr) minmax(0, 2fr);
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+
+    .book-meta {
+        border-right: 1px solid #e8a96d;
+        border-bottom: 0;
+        padding: 0.5rem 1.25rem 0.5rem 0;
+    }
+
+    .book-meta dl {
+        display: grid;
+        justify-content: stretch;
+        gap: 0.75rem;
+        padding: 0;
+    }
+
+    .book-content {
+        justify-items: start;
+        padding-left: 0.5rem;
+    }
+
+    .book-content h2 {
+        text-align: left;
+    }
+
+    .book-content figure {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .description {
+        margin-top: 0.75rem;
+    }
+}
