@@ -74,6 +74,10 @@ body {
     padding: 1.5rem;
 }
 
+.book-post:not(:last-child) {
+    border-bottom: 1px solid #e8a96d;
+}
+
 .book-meta {
     grid-area: meta;
     border-bottom: 1px solid #e8a96d;
