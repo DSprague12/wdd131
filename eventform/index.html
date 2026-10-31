@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#183c38">
+  <title>Event Ticket | WDD 131</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="eventform.css">
+  <script src="eventform.js" defer></script>
+</head>
+<body>
+  <main class="event-card">
+    <header class="event-header">
+      <h1>Event Ticket</h1>
+    </header>
+
+    <form id="eventForm" novalidate>
+      <div class="form-grid">
+        <div class="field">
+          <label for="firstName">First name</label>
+          <input id="firstName" name="firstName" type="text" autocomplete="given-name" required>
+        </div>
+
+        <div class="field">
+          <label for="lastName">Last name</label>
+          <input id="lastName" name="lastName" type="text" autocomplete="family-name" required>
+        </div>
+
+        <div class="field full-width">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+
+        <div class="field">
+          <label for="eventDate">Event date</label>
+          <input id="eventDate" name="eventDate" type="date" required>
+        </div>
+
+        <div class="field">
+          <label for="attendeeType">Type</label>
+          <select id="attendeeType" name="attendeeType" aria-controls="attendeeCodeField" required>
+            <option value="">Select type</option>
+            <option value="student">Student</option>
+            <option value="guest">Guest</option>
+          </select>
+        </div>
+
+        <div id="attendeeCodeField" class="field full-width" hidden>
+          <label id="attendeeCodeLabel" for="attendeeCode"></label>
+          <input id="attendeeCode" name="attendeeCode" type="text" autocomplete="off">
+        </div>
+      </div>
+
+      <button type="submit">Register for the event</button>
+    </form>
+
+    <section id="formMessage" class="form-message" aria-live="polite" aria-atomic="true"></section>
+  </main>
+</body>
+</html>
