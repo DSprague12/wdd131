@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet Snortleblat, the swamp beast diplomat. Follow this character's health and level as the adventure unfolds.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Snortleblat | Character Card">
+    <meta property="og:description" content="Meet Snortleblat, the swamp beast diplomat. Follow this character's health and level as the adventure unfolds.">
+    <meta property="og:url" content="https://dsprague12.github.io/wdd131/charactercard/">
+    <meta property="og:image" content="https://andejuli.github.io/wdd131/character_card/snortleblat.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Snortleblat | Character Card">
+    <meta name="twitter:description" content="Meet Snortleblat, the swamp beast diplomat. Follow this character's health and level as the adventure unfolds.">
+    <meta name="twitter:image" content="https://andejuli.github.io/wdd131/character_card/snortleblat.webp">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Snortleblat Character Card</title>
+</head>
+<body>
+    <main>
+        <h1>Character Card</h1>
+        <article class="card" aria-labelledby="character-name">
+            <img class="image" src="https://andejuli.github.io/wdd131/character_card/snortleblat.webp"
+                 alt="Snortleblat, a swamp beast diplomat" width="1200" height="630">
+            <h2 class="name" id="character-name"></h2>
+            <div class="stats" aria-label="Character stats">
+                <p><strong>Class:</strong> <span id="character-class"></span></p>
+                <p><strong>Level:</strong> <span id="character-level"></span></p>
+                <p><strong>Health:</strong> <span id="character-health"></span></p>
+            </div>
+            <p class="status" id="character-status" aria-live="polite"></p>
+            <div class="buttons">
+                <button id="attack-button" type="button">Attack</button>
+                <button id="level-up-button" type="button">Level Up</button>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 2rem 1rem;
+    background: #f0f4f8;
+    color: #202b2e;
+    font-family: "Palatino Linotype", Palatino, sans-serif;
+}
+
+main {
+    width: min(100%, 28rem);
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 0 1.25rem;
+    color: #263a3f;
+    font-size: clamp(1.6rem, 5vw, 2rem);
+    text-align: center;
+}
+
+.card {
+    overflow: hidden;
+    border-radius: 15px;
+    background: #313131;
+    box-shadow: 0 8px 16px rgb(0 0 0 / 30%);
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.name {
+    margin: 0;
+    padding: 1rem 1.5rem;
+    background: #5d747b;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.stats {
+    margin: 1rem 1.5rem 0;
+    color: #f0f4f8;
+}
+
+.stats p {
+    margin: 0.4rem 0;
+}
+
+.status {
+    min-height: 1.5rem;
+    margin: 0.75rem 1.5rem 0;
+    color: #d7e9b9;
+    font-weight: 700;
+}
+
+.status:empty {
+    display: none;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem 1rem;
+}
+
+button {
+    min-width: 7rem;
+    padding: 0.65rem 1rem;
+    border: 0;
+    border-radius: 8px;
+    background: #5d747b;
+    color: white;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background: #46595e;
+}
+
+button:focus-visible {
+    outline: 3px solid #d7e9b9;
+    outline-offset: 3px;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
