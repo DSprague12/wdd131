@@ -82,7 +82,9 @@ main hr {
 
 .recipe-grid {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    gap: 1.5rem;
     padding: 0.5rem 0 2rem;
 }
 
@@ -128,6 +130,11 @@ h2 {
 .recipe-description {
     display: none;
     line-height: 1.5;
+}
+
+.no-recipes {
+    margin: 0;
+    text-align: center;
 }
 
 .rating {
