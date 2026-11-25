@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="Wireframe of the desktop study view">
+  <rect x="0" y="0" width="640" height="360" fill="#ffffff"/>
+  <rect x="5" y="5" width="630" height="350" fill="none" stroke="#333333"/>
+  <rect x="15" y="15" width="610" height="45" fill="#dbe4f0" stroke="#333333"/>
+  <text x="320" y="43" text-anchor="middle" font-size="14" fill="#1a1a1a">PatentPrep (header) - Study | Quiz tabs</text>
+  <rect x="15" y="75" width="390" height="40" fill="#ffffff" stroke="#333333"/>
+  <text x="210" y="100" text-anchor="middle" font-size="12" fill="#1a1a1a">Chapter filter (dropdown)</text>
+  <rect x="15" y="125" width="390" height="160" fill="#fdf6dd" stroke="#333333"/>
+  <text x="210" y="200" text-anchor="middle" font-size="13" fill="#1a1a1a">FLASHCARD (click to flip)</text>
+  <rect x="15" y="295" width="120" height="35" fill="#eeeeee" stroke="#333333"/>
+  <text x="75" y="317" text-anchor="middle" font-size="12" fill="#1a1a1a">Prev</text>
+  <rect x="145" y="295" width="120" height="35" fill="#d9ead3" stroke="#333333"/>
+  <text x="205" y="317" text-anchor="middle" font-size="12" fill="#1a1a1a">Know It</text>
+  <rect x="275" y="295" width="130" height="35" fill="#f4cccc" stroke="#333333"/>
+  <text x="340" y="317" text-anchor="middle" font-size="12" fill="#1a1a1a">Still Learning / Next</text>
+  <rect x="420" y="75" width="205" height="255" fill="#eeeeee" stroke="#333333"/>
+  <text x="522" y="110" text-anchor="middle" font-size="13" fill="#1a1a1a">Stats panel</text>
+  <text x="522" y="140" text-anchor="middle" font-size="11" fill="#1a1a1a">Progress bar</text>
+  <text x="522" y="165" text-anchor="middle" font-size="11" fill="#1a1a1a">Known / Learning counts</text>
+  <text x="522" y="190" text-anchor="middle" font-size="11" fill="#1a1a1a">Best quiz score</text>
+  <text x="522" y="215" text-anchor="middle" font-size="11" fill="#1a1a1a">Content image</text>
+</svg>

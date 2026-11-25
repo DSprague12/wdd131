@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Site Plan</title>
+		<link type="text/css" rel="stylesheet" href="site-plan.css">
+	</head>
+
+	<body>
+		<header>
+			<h1>Patent Bar Study Tool Project Plan</h1>
+			<h2>Dallin Sprague</h2>
+			<h2>WDD 131</h2>
+			<!-- In the header above, add the name or your site, your name and class number. For example if you are in section 3 you would put WDD 131.03 -->
+		</header>
+		<main>
+
+			<hr>
+			<h2>Overview</h2>
+			<h3>Purpose</h3>
+			<p>This study tool helps patent bar candidates study the Manual of Patent Examining Procedure through flashcards and
+				timed practice quizzes. Users can study cards by chapter, mark which concepts they know and which they are still
+				learning, and track their progress.</p>
+
+			<h3>Audience</h3>
+			<p>The audience is patent agent and patent attorney candidates preparing for the USPTO exam,
+				including law students and STEM graduates. These users are busy and study
+				in short blocks of time.</p>
+
+			<h3>Dynamic elements</h3>
+			<ul>
+				<li><strong>Flashcard study mode:</strong> Cards are rendered from a JavaScript array of card objects. Clicking a 
+					card flips it to reveal the answer, and Next/Previous buttons move through the deck.</li>
+				<li><strong>Chapter filter:</strong> A dropdown filters the deck by MPEP chapter using the <em>filter</em> array 
+					method, and the deck re-renders with only the matching cards.</li>
+				<li><strong>Know / Still Learning buttons:</strong> Each card can be marked known or still learning. Conditional 
+					branching updates the card's status, the progress bar width, and the counts in the stats area.</li>
+				<li><strong>Quiz mode:</strong> A timed quiz checks the selected answer with conditional logic, gives immediate 
+					right/wrong feedback, and computes the final score using the <em>reduce</em> array method.</li>
+				<li><strong>Progress persistence:</strong> Card status and quiz history are saved to localStorage so progress 
+					survives page reloads. The stats area is built with <em>forEach</em> and <em>map</em>.</li>
+				<li><strong>Organization:</strong> The code is split into multiple functions: renderDeck, flipCard, filterByChapter, 
+					markCard, startQuiz, checkAnswer, updateStats, and saveProgress.</li>
+			</ul>
+			<p>Sample data model (objects in an array):</p>
+			<pre><code>const cards = [
+  { id: 1, chapter: "MPEP 700", question: "What is a restriction requirement?",
+    answer: "An examiner action requiring election of one invention when two or more distinct inventions are claimed.", known: false },
+  { id: 2, chapter: "MPEP 2100", question: "What does 35 USC 103 cover?",
+    answer: "Nonobviousness: a claimed invention is unpatentable if obvious to a person of ordinary skill in the art.", known: false }
+];</code></pre>
+
+			<hr>
+			<h2>Branding</h2>
+			<h3>Website Logo</h3>
+			<!-- Replace this with some sort of logo for your site.  A logo can be as simple as the name of your site in a nice font :) -->
+			<img src="../images/logo.svg" alt="PatentPrep logo: the site name in white and gold on a navy background next to a gold book icon" width="320">
+			<hr>
+			<h2>Style Guide</h2>
+
+			<h3>Color Palette</h3>
+			<!--  The colors you choose for a website are one of the most important decisions you will make. Follow the instructions on the activity in iLearn then return and replace the color codes below with the hex color codes (the 6 digit numbers that show at the bottom of each color) for the colors you have chosen below.  You should have at least 2 colors but do not have to fill in all 4 if you do not need them.  -->
+
+			<!-- Copy and paste the URL to your finished palette below Make sure to paste it into both spots -->
+			Palette URL:
+			<a
+				href="https://coolors.co/1f3a5f-c9a227-a43312-3e7c4f"
+				target="_blank"
+				>https://coolors.co/1f3a5f-c9a227-a43312-3e7c4f</a
+			>
+
+			<table class="colors">
+				<tbody>
+					<tr>
+						<th>Primary</th>
+						<th>Secondary</th>
+						<th>Accent 1</th>
+						<th>Accent 2</th>
+					</tr>
+					<!-- Replace the numbers in the boxes below with your hex color codes. Then switch to the site-plan.css file and change your colors there as well. -->
+					<tr>
+						<td class="primary">#1F3A5F</td>
+						<td class="secondary">#C9A227</td>
+						<td class="accent1">#A43312</td>
+						<td class="accent2">#3E7C4F</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>Typography</h3>
+			<p>Headings use a Georgia serif stack for a formal feel. Body text uses a system sans-serif for readability and speed.</p>
+
+			<h3>Pseudocode for your project</h3>
+
+			<ol>
+				<li>WHEN the page loads, read saved progress from localStorage; IF saved data exists, restore card statuses, ELSE start all cards as "still learning".</li>
+				<li>Build the chapter dropdown from the unique chapters in the cards array.</li>
+				<li>Call renderDeck with the full cards array: clear the card container, create a card element for the current card, and show its question side.</li>
+				<li>WHEN the user clicks the card, flip it (toggle a CSS class) to show the answer side.</li>
+				<li>WHEN the user clicks Next or Previous, change the current index; IF at the end of the deck, wrap to the first card; re-render.</li>
+				<li>WHEN the user changes the chapter dropdown, filter the cards array by the selected chapter and re-render the deck starting at index 0.</li>
+				<li>WHEN the user clicks "Know It" or "Still Learning", set the current card's known property, save progress to localStorage, and call updateStats.</li>
+				<li>updateStats: count known cards with reduce, set the progress bar width as a percentage, and update the known/learning/total text.</li>
+				<li>WHEN the user starts the quiz, select 10 questions, start a countdown timer, and show one question with answer buttons.</li>
+				<li>WHEN the user picks an answer, IF it matches the correct answer, add a point and show green feedback, ELSE show red feedback with the correct answer; then advance.</li>
+				<li>WHEN the quiz ends (all questions answered OR the timer reaches zero), show the final score, save it to quiz history in localStorage, and offer a restart button.</li>
+			</ol>
+
+			<h3>Wireframes</h3>
+			<p>
+				The app is a single page with two views switched by tabs: a Study view (flashcards) and a Quiz view.
+				Wireframes for both views are below, with the Study view shown in mobile and desktop layouts.
+			</p>
+
+			<h3>Landing page (Study view)</h3>
+			<p>
+				The landing page opens on the Study view. The header carries the logo and the Study/Quiz tabs. Below it,
+				a chapter filter dropdown, then the flashcard itself: clicking the card flips it, and the Know It and
+				Still Learning buttons sit directly under it with Prev/Next navigation. A progress bar and known/total
+				counts close the page on mobile. On wider screens (700px and up) the stats move into a side panel next to
+				the card, and the page's one content image (patent documents, with descriptive alt text) appears there.
+			</p>
+			<img src="images/wireframe-study-mobile.svg" alt="Wireframe of the mobile study view: header, mode tabs, chapter dropdown, flashcard, Know It and Still Learning buttons, progress bar" width="300">
+			<img src="images/wireframe-study-desktop.svg" alt="Wireframe of the desktop study view: header across the top, flashcard on the left, stats panel on the right" width="640">
+
+			<h3>Quiz view</h3>
+			<p>
+				The Quiz view keeps the same header and shell. A timer and question counter sit above the question card,
+				followed by four answer buttons. Feedback (correct or incorrect, with the score so far) appears under the
+				answers after each pick. When the quiz ends, the final screen shows the total score, the best previous
+				score from localStorage, and a restart button.
+			</p>
+			<img src="images/wireframe-quiz.svg" alt="Wireframe of the quiz view: header, timer and question counter, question card, four answer buttons, feedback area" width="300">
+			<img src="images/wireframe-quiz-desktop.svg" alt="Wireframe of the desktop quiz view: header, timer and question counter, question card, four answer buttons, feedback area" width="640">
+		</main>
+	</body>
+</html>

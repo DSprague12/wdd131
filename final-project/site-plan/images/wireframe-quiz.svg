@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 480" width="300" height="480" role="img" aria-label="Wireframe of the quiz view">
+  <rect x="0" y="0" width="300" height="480" fill="#ffffff"/>
+  <rect x="5" y="5" width="290" height="470" fill="none" stroke="#333333"/>
+  <rect x="15" y="15" width="270" height="45" fill="#dbe4f0" stroke="#333333"/>
+  <text x="150" y="43" text-anchor="middle" font-size="14" fill="#1a1a1a">PatentPrep (header)</text>
+  <rect x="15" y="70" width="130" height="30" fill="#eeeeee" stroke="#333333"/>
+  <text x="80" y="90" text-anchor="middle" font-size="12" fill="#1a1a1a">Timer 2:45</text>
+  <rect x="155" y="70" width="130" height="30" fill="#eeeeee" stroke="#333333"/>
+  <text x="220" y="90" text-anchor="middle" font-size="12" fill="#1a1a1a">Question 3 of 10</text>
+  <rect x="15" y="110" width="270" height="90" fill="#fdf6dd" stroke="#333333"/>
+  <text x="150" y="150" text-anchor="middle" font-size="12" fill="#1a1a1a">Question text</text>
+  <text x="150" y="170" text-anchor="middle" font-size="11" fill="#1a1a1a">(MPEP chapter shown)</text>
+  <rect x="15" y="210" width="270" height="40" fill="#ffffff" stroke="#333333"/>
+  <text x="150" y="235" text-anchor="middle" font-size="12" fill="#1a1a1a">Answer A</text>
+  <rect x="15" y="258" width="270" height="40" fill="#ffffff" stroke="#333333"/>
+  <text x="150" y="283" text-anchor="middle" font-size="12" fill="#1a1a1a">Answer B</text>
+  <rect x="15" y="306" width="270" height="40" fill="#ffffff" stroke="#333333"/>
+  <text x="150" y="331" text-anchor="middle" font-size="12" fill="#1a1a1a">Answer C</text>
+  <rect x="15" y="354" width="270" height="40" fill="#ffffff" stroke="#333333"/>
+  <text x="150" y="379" text-anchor="middle" font-size="12" fill="#1a1a1a">Answer D</text>
+  <rect x="15" y="404" width="270" height="35" fill="#d9ead3" stroke="#333333"/>
+  <text x="150" y="427" text-anchor="middle" font-size="12" fill="#1a1a1a">Feedback: Correct! / Score so far</text>
+  <text x="150" y="462" text-anchor="middle" font-size="11" fill="#1a1a1a">Final screen: score + Restart button</text>
+</svg>
